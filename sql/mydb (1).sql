@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Jun-2021 às 18:03
+-- Tempo de geração: 10-Jun-2021 às 21:45
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.4
 
@@ -41,15 +41,13 @@ CREATE TABLE `dadosuser` (
 --
 
 INSERT INTO `dadosuser` (`id`, `nome`, `idade`, `email`, `senha`, `imagem`) VALUES
-(11, 'Maria Joana', 30, 'maria123@gmail.com', 'maria123', ''),
-(12, 'katiuscia', 46, 'katiuscia@outlook.com', 'kati123', ''),
-(15, 'kaio', 17, 'kaioenzobr@gmail.com', '12345', 'uploads/IMG_20200803_012802_624.jpg'),
-(17, 'marcelo', 40, 'marcelo@email.com', '1234', ''),
-(18, 'Lucas', 18, 'lucaspiteu@gmail.com', '1234', ''),
-(19, 'Guilherme Borges', 17, 'guilhermeb@gmail.com', '1234', ''),
-(20, 'Leonardo de Melo', 43, 'leonardomelo@gmail.com', '1234', ''),
-(21, 'Joao', 27, 'joaozinho@fornite.com', '1234', '8723e7551e022fac5a01d70dce1c2f14.'),
-(39, 'ronaldo', 59, 'ronaldo@gmail.com', '1234', 'uploads/4f86c076fd7b95769fc4430138fc538d.jpg');
+(15, 'kaio', 17, 'kaioenzobr@gmail.com', '12345', 'f4c5c3b67bb8a97dd53afd05536d4ae9.jpg'),
+(18, 'Lucas Eduardo', 18, 'lucaspiteu@gmail.com', '1234', '146e998d540a82587fea5f4bda3bf4b0.jpg'),
+(75, 'Brtt', 41, 'brttpain@gmail.com', '1234', '33c74528e2bc3bbe593e08b2e693d051.jfif'),
+(76, 'Brtt', 41, 'brttpain@gmail.com', '1234', '8b5c66c7b3e251a8e58d35d54bd28ff0.jpg'),
+(77, 'Tinowns', 26, 'tinowns@gmail.com', '1234', '600d84bf029cc27e718398fd4f9b1da0.jpg'),
+(78, 'Tanjiro', 21, 'tanjiro@gmail.com', '1234', '4b0f32a2bda78c59a476fd9fea51dda2.jpg'),
+(79, 'Robo', 24, 'robo@gmail.com', '1234', 'a7682e25a619135688c523b3c998fe42.jpg');
 
 --
 -- Índices para tabelas despejadas
@@ -69,7 +67,7 @@ ALTER TABLE `dadosuser`
 -- AUTO_INCREMENT de tabela `dadosuser`
 --
 ALTER TABLE `dadosuser`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -6,7 +6,11 @@ Montar uma interface simples que podesse simular um ambiente em que o CRUD podes
  <h1>🖼️Screenshot das telas da aplicação</h1>
 </div>
 <h1>🖼️ Tela principal da aplicação</h1>
-<p>🖼️Tela de cadastro, e tela de edição/visualização/exclusão</p>
+<img src='https://github.com/kaioenzo/ProjetoCRUD/blob/master/assets/home-crud.png'>
+<p>🖼️Tela de cadastro, tela de login e tela de edição/visualização/exclusão</p>
+<img src='https://github.com/kaioenzo/ProjetoCRUD/blob/master/assets/cadastro-crud.png'>
+<img src='https://github.com/kaioenzo/ProjetoCRUD/blob/master/assets/selecao-crud.png'>
+<img src='https://github.com/kaioenzo/ProjetoCRUD/blob/master/assets/login-crud.png'>
 <h1>👷Como rodar?</h1>
 <p>
 #Clonar o repositório

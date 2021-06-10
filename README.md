@@ -1,4 +1,7 @@
+<head>
 <script src="https://kit.fontawesome.com/ce883965d2.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
 <i class="fas fa-laptop"></i><h1> Sobre o projeto <h1>
 Projeto CRUD - Neste projeto são exercitadas técnicas de PHP e banco de dados MYSQL num sistema simples usando as quatro operações básicas de um banco de dados Creat, Read, Update e Delete.
 💡 <h1>Ideia do Projeto</h1>

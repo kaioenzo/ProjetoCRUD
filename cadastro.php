@@ -1,10 +1,11 @@
-<?php
+<head>
+    <title>Cadastro</title>
+</head>
+    <?php
 session_start();
-if(!isset($_SESSION['id'])){
+if(!isset($_SESSION['usuarioNome'])){
     header("Location: login.php");
 }
-include __DIR__ . '/includes/header.php';
-include __DIR__ . "/includes/formulario_cadastro.php";
-include __DIR__ . "/includes/footer.php";
-
+include 'includes/header.php';
+include  'includes/formulario_cadastro.php';
 

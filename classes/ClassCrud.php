@@ -9,7 +9,7 @@ class ClassCrud extends ClasseBanco2 {
     private function countParametros($Parametros) {
         $this->Contador = count($Parametros);
     }
-    
+    //método prepare para mysqli
     private function preparedStatements($Query, $Tipos, $Parametros){
         $this->countParametros($Parametros);
         $Con = $this->conecta_DB();
@@ -47,5 +47,22 @@ class ClassCrud extends ClasseBanco2 {
         $this->preparedStatements("update {$Tabela} set {$Set} where {$Condicao}", $Tipos, $Parametros);
         return $this->Crud;
     }
+
+    #Método para autenticar usuário
+    public function validarUSER($user,$pass) {
+        $usuario = $this->conecta_DB()->real_escape_string($user);
+        $senha = $this->conecta_DB()->real_escape_string($pass);
+        
+        $sql = "SELECT * FROM dadosuser WHERE email='$usuario' && senha='$senha' LIMIT 1";
+        $result = $this->conecta_DB()->query($sql);
+        $resultado = $result->fetch_assoc();
+        if(empty($resultado)){
+        $_SESSION['loginErro'] = "E-mail ou senha inválidos";
+        header("Location: index.php");
+    }elseif (isset ($resultado)) {
+            $_SESSION['usuarioNome'] = $resultado['nome'];
+            header ("Location: index.php");
+        }
+}
 }
     

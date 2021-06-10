@@ -1,7 +1,9 @@
-<?phpsession_start();
-if(!isset($_SESSION['id'])){
-    header("Location: login.php");
-}?>
+<head>
+    <title>Login</title>
+</head>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,26 +14,34 @@ if(!isset($_SESSION['id'])){
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="wrapper fadeInDown">
+<div class="wrapper fadeInDown ">
   <div id="formContent">
     <!-- Tabelas Titulos-->
 
     <!-- Icone -->
     <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+        <h1> Projeto CRUD</h1>
     </div>
 
     <!-- Login Formulário-->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="senha" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Entrar">
+    <form action="valida.php" method="POST" >
+      <label> Endereço de E-mail:</label>
+      <input type="email" id="email" class="fadeIn second form-control" name="email" placeholder="exemplo@email.com">
+      <label> Senha:</label>
+      <input type="password" id="pass" class="fadeIn third form-control" name="senha" placeholder="senha">
+      <input type="submit" class="fadeIn fourth " value="Entrar">
     </form>
-
-    <!-- Cadastro novo usuário -->
-    <div id="formFooter">
-        <a class="underlineHover" href="cadastro.php">Não tem login? Se cadastre!</a>
+    
+    <div class="text-danger text-center">
+        <?php 
+        if (isset($_SESSION['loginErro']))
+            echo $_SESSION['loginErro'];
+            unset($_SESSION['loginErro'])
+        ?>
     </div>
+    
+
+   
 
   </div>
 </div>

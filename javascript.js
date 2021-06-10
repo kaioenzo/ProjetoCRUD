@@ -4,7 +4,7 @@
     var Dados = $(this).serialize();
     
     $.ajax({
-        url: 'Controller/ControllerCadastro.php',
+        url: 'Controllers/ControllerCadastro.php',
         type: 'post',
         dataType: 'html',
         data: Dados,

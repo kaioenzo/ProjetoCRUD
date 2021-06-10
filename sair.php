@@ -1,6 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['id'])){
+//Destrói a sessão
+if(!isset($_SESSION['usuarioNome'])){
     header("Location: login.php");
 }
-echo "comando para destruir a seção";
+unset($_SESSION['usuarioNome']);
+header("Location: login.php");

@@ -1,11 +1,15 @@
+<head>
+    <title>Seleciona</title>
+</head>
 <?php
-include __DIR__ . '/includes/header.php';
-require 'classes/ClassCrud.php';
-echo '<h1 class="text-center">Seleção dos dados</h1>';
 session_start();
-if(!isset($_SESSION['id'])){
+if(!isset($_SESSION['usuarioNome'])){
     header("Location: login.php");
 }
+include 'includes/header.php';
+require 'classes/ClassCrud.php';
+echo '<h1 class="text-center">Seleção dos dados</h1>';
+
 
 ?>
 <!-- Seção para visualização de usuários cadastrados e possivel edição de dados -->
@@ -16,6 +20,7 @@ if(!isset($_SESSION['id'])){
         <th>Nome</th>
         <th>Idade</th>
         <th>Email</th>
+        <th>Imagem</th>
         </thead>
         <tbody>
             <?php
@@ -29,6 +34,7 @@ if(!isset($_SESSION['id'])){
                 <td><?php echo $Fetch[1]; ?></td>
                 <td><?php echo $Fetch[2]; ?></td>
                 <td><?php echo $Fetch[3]; ?></td>
+                <td><?php echo "<img width='50px' height='50px' src='uploads/{$Fetch[5]}'>" ?></td>
                 <td>
                     <a href="<?php echo "visualizar.php?id={$Fetch[0]}";?>">
                     <img src="imagens/visualizar.jpeg" alt="Visualizar"></a>

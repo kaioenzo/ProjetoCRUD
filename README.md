@@ -1,5 +1,5 @@
 <h1>💻 Sobre o projeto </h1>
-Projeto CRUD - Neste projeto são exercitadas técnicas de PHP e banco de dados MYSQL num sistema simples usando as quatro operações básicas de um banco de dados: Creat, Read, Update e Delete. Neste projeto é possível que um usuário se cadastre, usando seu nome, e-mail, senha e foto de perfil, e é possível editar e visualizar essa informações em uma interface simples, caso o usuário esteja cadastrado na base de dados.
+Projeto CRUD - Neste projeto são exercitadas técnicas de PHP e banco de dados MYSQL num sistema simples usando as quatro operações básicas de um banco de dados: Creat, Read, Update e Delete. Neste projeto é possível que um usuário se cadastre, usando seu nome, e-mail, senha e foto de perfil, e é possível editar e visualizar essas informações em uma interface simples, caso o usuário esteja cadastrado na base de dados.
  <h1>💡Ideia do Projeto</h1>
 Montar uma interface simples que podesse simular um ambiente em que o CRUD podesse ser requisitado.
 <div >

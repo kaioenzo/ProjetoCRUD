@@ -6,7 +6,7 @@ abstract class ClasseBanco2 {
              $con = new mysqli ("localhost", "root", "", "mydb");
              return $con;
          } catch (Exception $ex) {
-             return $erro->getMessage();
+             return $error->getMessage();
          }
      }
 }

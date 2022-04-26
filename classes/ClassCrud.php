@@ -53,7 +53,8 @@ class ClassCrud extends ClasseBanco2 {
         $usuario = $this->conecta_DB()->real_escape_string($user);
         $senha = $this->conecta_DB()->real_escape_string($pass);
         
-        $sql = "SELECT * FROM dadosuser WHERE email='$usuario' && senha='$senha' LIMIT 1";
+        $sql = "SELECT * FROM `admsystem` WHERE email='$usuario' && senha='$senha' ";
+        
         $result = $this->conecta_DB()->query($sql);
         $resultado = $result->fetch_assoc();
         if(empty($resultado)){

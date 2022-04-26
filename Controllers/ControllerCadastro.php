@@ -1,4 +1,5 @@
 <?php
+session_start();
 //require das variáveis filtradas e da classe de CRUD do banco de dados
 require ('../includes/variaveis.php');
 require ('../classes/ClassCrud.php');
@@ -33,7 +34,7 @@ if (isset($_POST['submit'])) {
             $caminho_imagem = '../uploads/' . $nome_imagem;
             // Faz o upload da imagem para seu respectivo caminho
             move_uploaded_file($foto["tmp_name"], $caminho_imagem);
-    
+        
   
 //Verifica se a ação é de cadastro novo ou atualização
 if ($Acao == 'Cadastrar'){
@@ -47,16 +48,17 @@ if ($Acao == 'Cadastrar'){
                 $nome_imagem
             )
         );
-        echo 'Cadastro realizado com sucesso';
+        $_SESSION['status'] = 'Cadastro do usuário: ' .$Nome . ' realizado com sucesso!';
+        header("location: ../selecionar.php");
 }else {
     $Crud->updateDB("dadosuser","nome=?,idade=?,email=?,senha=?,imagem=?","id=?", "sisssi",array(
         $Nome,$Idade,$Email,$Senha,$nome_imagem,$Id
     )
             );
-            echo 'Cadastro atualizado com sucesso';
+        $_SESSION['status'] = "Cadastro atualizado com sucesso!";
+        header("location: ../visualizar.php?id=$Id");
             
 }
         }
     }
 }
-

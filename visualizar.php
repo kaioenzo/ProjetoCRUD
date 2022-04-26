@@ -20,8 +20,23 @@ $Crud = new ClassCrud();
     $Result = $BFetch->fetch_all();
         foreach ($Result as $Fetch){
             ?>
+
+          
     <h1> Dados do usuário</h1>
     <hr>
+
+    <?php
+     if(isset($_SESSION['status']))
+     {
+        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+         <strong>" . $_SESSION['status'] . "</strong> Você pode conferir os dados abaixo!
+         <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+           <span aria-hidden='true'>&times;</span></button>
+           </div>";
+    unset($_SESSION['status']);
+     }
+    ?>
+
     <strong>Imagem: </strong><?php echo "<img width='100px' height='100px' src='uploads/{$Fetch[5]}'>" ?><br>
     <strong>Nome: </strong><?php echo $Fetch[1];?><br>
     <strong>Idade: </strong><?php echo $Fetch[2];?><br>

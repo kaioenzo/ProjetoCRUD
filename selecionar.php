@@ -10,6 +10,15 @@ include 'includes/header.php';
 require 'classes/ClassCrud.php';
 echo '<h1 class="text-center">Seleção dos dados</h1>';
 
+if(isset($_SESSION['status']))
+{
+   echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+    <strong>" . $_SESSION['status'] . "</strong> Você pode conferir os dados abaixo!
+    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+      <span aria-hidden='true'>&times;</span></button>
+      </div>";
+unset($_SESSION['status']);
+}
 
 ?>
 <!-- Seção para visualização de usuários cadastrados e possivel edição de dados -->

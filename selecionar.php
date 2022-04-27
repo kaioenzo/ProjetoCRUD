@@ -1,5 +1,5 @@
 <head>
-    <title>Seleciona</title>
+    <title>CRUD - Cadastros</title>
 </head>
 <?php
 session_start();
@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuarioNome'])){
 }
 include 'includes/header.php';
 require 'classes/ClassCrud.php';
-echo '<h1 class="text-center">Seleção dos dados</h1>';
+echo '<h1 class="text-center">Usuários cadastrados</h1>';
 
 if(isset($_SESSION['status']))
 {

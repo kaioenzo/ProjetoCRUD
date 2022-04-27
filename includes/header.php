@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<div class="jumbotron text-center my-0" >
+<div class="jumbotron text-center my-0 p-3" >
     <h1>Projeto CRUD</h1>
     <?php echo "Seja bem vindo ". $_SESSION['usuarioNome']?>
 </div>
@@ -19,10 +19,13 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="selecionar.php">Selecionar</a>
+        <a class="nav-link" href="selecionar.php">Cadastrados</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cadastro.php">Cadastro</a>
+        <a class="nav-link" href="cadastro.php">Novo Cadastro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="adminsystem.php">Administradores</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="sair.php">Sair</a>

@@ -50,7 +50,8 @@ if ($Acao == 'Cadastrar'){
         );
         $_SESSION['status'] = 'Cadastro do usuário: ' .$Nome . ' realizado com sucesso!';
         header("location: ../selecionar.php");
-}else {
+}
+else {
     $Crud->updateDB("dadosuser","nome=?,idade=?,email=?,senha=?,imagem=?","id=?", "sisssi",array(
         $Nome,$Idade,$Email,$Senha,$nome_imagem,$Id
     )

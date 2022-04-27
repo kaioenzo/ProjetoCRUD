@@ -17,7 +17,7 @@ include 'includes/header.php';
     
     <div class="my-2 container text-center">
         
-    <img src="imagens/crud-img.jpg" class="img-" alt="CRUD">
+    <img src="imagens/crud-img.jpg" class="img-fluid" alt="CRUD">
     <p class="lead">
         Projeto desenvolvido em 2021 com o objetivo de criar uma aplicação WEB que pudesse executar os conceitos de CRUD associado a linguagem PHP e SQL.
     </p>

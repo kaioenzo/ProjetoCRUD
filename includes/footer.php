@@ -4,7 +4,7 @@
         Todos os direitos reservados <?php echo date("Y"); ?>&reg;
     </p>
     <p> 
-        Kaio Enzo
+        <a href="https://www.linkedin.com/in/kaio-enzo-187043209/">Kaio Enzo</a>
     </p>
        
         </p>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 //comando para excluir o cadastro
 require '../classes/ClassCrud.php';
 $Crud = new ClassCrud();
